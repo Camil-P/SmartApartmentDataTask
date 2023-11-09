@@ -1,0 +1,26 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "default",
+    "region"      : "eu-central-1",
+    "configuration" : "Release",
+    "package-type"  : "Image",
+    "function-memory-size" : 256,
+    "function-timeout"     : 30,
+    "image-command"        : "InterviewDemo::InterviewDemo.Function::FunctionHandler",
+    "docker-host-build-output-dir" : "./bin/Release/lambda-publish",
+    "function-name"                : "interviewLambda",
+    "function-role"                : "arn:aws:iam::223224847913:role/interviewLambda",
+    "function-architecture"        : "x86_64",
+    "function-subnets"             : "subnet-0a28a42ba73a1f4ac,subnet-0c6c5a318ed6b8246,subnet-030cddf50ecdc8af6",
+    "function-security-groups"     : "sg-0e4732c78560786b5,sg-06dda2ac16db69260",
+    "tracing-mode"                 : "PassThrough",
+    "environment-variables"        : "\"GoogleApiKey\"=\"AIzaSyDl0gzaalSU3iTxETsdeOhhmu_icZw1o3E\";\"GoogleApiUrl\"=\"https://maps.googleapis.com/maps/api/geocode/json?address=\";\"DynamoDBTableName\"=\"GeocodeCache\";\"DynamoDBCacheDuration\"=\"30\"",
+    "dockerfile"                   : "Dockerfile",
+    "image-tag"                    : "interviewlambda:latest"
+}
